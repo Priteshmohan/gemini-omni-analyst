@@ -134,7 +134,7 @@ with tab2:
                         st.error("Video processing failed.")
                     else:
                         st.success("Video Processed! Generating Insights...")
-                        model = genai.GenerativeModel('gemini-1.5-pro-latest') # Pro is better for video
+                        model = genai.GenerativeModel('gemini-3-flash-preview') # Pro is better for video
                         
                         prompt = "Watch this video carefully. Describe the action, the setting, and any key events effectively."
                         response = model.generate_content([prompt, video_file])
